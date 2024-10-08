@@ -1,0 +1,23 @@
+Chiến lược 1-3:
+Giai đoạn đầu (MVO): Thuật toán bắt đầu bằng việc cập nhật dân số theo cơ chế MVO (Multi-Verse Optimizer), giúp khám phá các vùng tiềm năng của không gian tìm kiếm. Điều này sẽ chạy cho đến số vòng lặp được xác định bởi switch_iter.
+
+Giai đoạn sau (COA): Sau khi số vòng lặp đạt đến switch_iter, thuật toán chuyển sang COA (Coati Optimization Algorithm), sử dụng cơ chế của COA để tinh chỉnh thêm vị trí của các cá thể, tập trung vào khai thác sâu hơn vùng có khả năng chứa cực trị toàn cục.
+
+Cập nhật vị trí kết hợp: Mỗi cá thể trong quần thể sẽ có 50% cơ hội cập nhật vị trí bằng cơ chế MVO hoặc COA trong suốt các vòng lặp. Điều này giúp đảm bảo sự đa dạng trong cách các cá thể di chuyển.
+
+=====================================================
+Chiến lược 2-3:
+Tạo ra một thuật toán hiệu quả hơn, giúp cải thiện tốc độ hội tụ và giảm thời gian chạy bằng cách tối ưu hóa quá trình cập nhật vị trí. Cụ thể:
+
+Adaptive Switching (Chiến lược 2): Chúng ta sẽ bắt đầu với một trong hai thuật toán (MVO hoặc COA). Sau một số vòng lặp, nếu không có sự cải thiện đáng kể về giá trị fitness, chúng ta sẽ chuyển đổi sang thuật toán kia. Điều này giúp đảm bảo thoát khỏi các bẫy cục bộ và tăng cường khả năng hội tụ toàn cục.
+
+Blended Position Update (Chiến lược 3): Mỗi vòng lặp, một nửa quần thể sẽ cập nhật vị trí theo cơ chế của MVO, và nửa còn lại sẽ cập nhật theo COA. Điều này giữ được sự đa dạng trong cách các cá thể di chuyển và tăng khả năng tìm kiếm các vùng tiềm năng trong không gian giải pháp.
+Chiến lược 6 (Adaptive Combination Mechanism) sẽ giúp tránh dính cực trị cục bộ tốt hơn bằng cách điều chỉnh linh hoạt giữa việc khai thác (exploitation) và khám phá (exploration) không gian tìm kiếm. Cụ thể:
+
+=====================================================
+Chiến lược 2-3-6:
+Adaptive Switching (Chiến lược 2): Thay đổi chiến lược dựa trên sự cải thiện fitness, nhưng kết hợp với việc áp dụng chiến lược 6 để điều chỉnh tỷ lệ cập nhật giữa MVO và COA theo thời gian thực.
+
+Blended Position Update (Chiến lược 3): Vẫn giữ cơ chế cập nhật vị trí của cả MVO và COA trong mỗi vòng lặp.
+
+Adaptive Combination Mechanism (Chiến lược 6): Điều chỉnh tỷ lệ giữa MVO và COA trong quá trình cập nhật. Khi fitness của các cá thể giảm quá nhanh và có dấu hiệu bị dính cực trị cục bộ, chúng ta có thể tăng tỷ lệ cập nhật COA (khám phá) để tránh bị dính cục bộ và sau đó chuyển về MVO (khai thác) khi cần khai thác các vùng tiềm năng.
