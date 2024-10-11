@@ -2,9 +2,9 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 
-# Hàm fitness: Hàm rosenbrock
-# def rosenbrock(x):
-#     return 10 * len(x) + sum((xi**2 - 10 * np.cos(2 * np.pi * xi)) for xi in x)
+# Hàm fitness: Hàm rastrigin
+#def rastrigin(x):
+#    return 10 * len(x) + sum((xi**2 - 10 * np.cos(2 * np.pi * xi)) for xi in x)
 
 def rosenbrock(x):
     return sum(100.0 * (x[1:] - x[:-1]**2.0)**2.0 + (1 - x[:-1])**2.0)
